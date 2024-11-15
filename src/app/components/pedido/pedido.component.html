@@ -1,0 +1,10 @@
+<div>
+    <form #pedidoForm="ngForm">
+        <select #selectcubo name="selectcubo">
+            @for(cubo of cubos;track cubo){
+                <option value="{{cubo.idCubo}}">{{cubo.nombre}}</option>
+            }
+        </select>
+        <button (click)="comprarCubo()">comprar</button>
+    </form>
+</div>

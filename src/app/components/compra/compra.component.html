@@ -1,0 +1,26 @@
+<div>
+    <h1>Pedidos</h1>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Núm. Pedido</th>
+                <th>ID Cubo</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(producto of productos;track producto){
+                <tr>
+                    <td>{{producto.idPedido}}</td>
+                    <td>{{producto.idCubo}}</td>
+                    <td>{{producto.fechaPedido}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" [routerLink]="['/perfil']">Volver al perfil</a>
+    <a class="btn btn-primary" [routerLink]="['/pedido']">Realizar Pedido</a>
+</div>
+
