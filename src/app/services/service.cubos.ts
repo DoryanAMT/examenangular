@@ -100,7 +100,7 @@ export default class ServiceCubos {
             let url = environment.urlApiCubos + request;
             console.log(url)
             return axios
-            .post(url,{ headers })
+            .post(url,{},{ headers })
             .then(response => {
                 console.log(response)
             })
